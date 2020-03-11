@@ -45,7 +45,7 @@ def main():
     s.bind(("", port))
     s.listen(89)
     s = ssl.wrap_socket(s, certfile="./server.pem", server_side=True)
-    print("[*] Serving HTTPS on 0.0.0.0 on port %i" % port)
+    print("[*] Serving HTTPS on 0.0.0.0 on port %i" % (port))
     while(True):
         conn, addr = s.accept()
         print("[!] Connection received from %s" % addr[0])
